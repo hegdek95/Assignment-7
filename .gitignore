@@ -20,3 +20,79 @@ d['anjur'] = 3
 
 # Print the updated dictionary
 print(d)
+
+# 3 Write a Python script to concatenate following dictionaries to create a new one.
+
+dic1 = {1:10, 2:20}
+dic2 = {3:30, 4:40}
+dic3 = {5:50, 6:60}
+
+result_dict = {}
+for d in (dic1, dic2, dic3):
+    result_dict.update(d)
+
+print(result_dict)
+
+# 4 Write a Python script to check if a given key already exists in a dictionary. 
+
+my_dict = {"apple": 3, "banana": 5, "orange": 2}
+
+key = "apple"
+if key in my_dict:
+    print(f"The key '{key}' exists in the dictionary.")
+else:
+    print(f"The key '{key}' does not exist in the dictionary.")
+    
+ # 5 Write a Python program to iterate over dictionaries using for loops.
+ 
+my_dict = {"apple": 3, "banana": 5, "orange": 2}
+for key in my_dict:
+    value = my_dict[key]
+    print(f"The value of '{key}' is {value}.")
+
+# 6 Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x). 
+n = 5
+dict1 = {}
+for i in range(1, n+1):
+    dict1[i] = i*i
+
+print(dict1)
+
+#7 Write a Python script to merge two Python dictionaries 
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+
+merged_dict = dict1.copy()  
+merged_dict.update(dict2)  
+
+print(merged_dict)
+
+
+
+
+# 8 Write a Python program to sum all the items in a dictionary.
+my_dict = {'a': 100, 'b': 200, 'c': 300}
+
+# Using the sum() function to sum all the values in the dictionary
+total_sum = sum(my_dict.values())
+
+print("The sum of all the items in the dictionary is:", total_sum)
+
+# 9 Write a Python script to merge two Python dictionaries
+
+my_dict = {'a': 10, 'b': 20, 'c': 30}
+
+product = 1
+for value in my_dict.values():
+    product *= value
+
+print("The product of all the items in the dictionary is:", product)
+
+# 10  Write a Python program to remove a key from a dictionary.
+my_dict = {'a': 10, 'b': 20, 'c': 30}
+
+key_to_remove = 'b'
+del my_dict[key_to_remove]
+
+print("The dictionary after removing the key", key_to_remove, ":", my_dict)
+
