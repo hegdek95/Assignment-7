@@ -96,3 +96,92 @@ del my_dict[key_to_remove]
 
 print("The dictionary after removing the key", key_to_remove, ":", my_dict)
 
+# 11 Write a Python program to sort a dictionary by key.
+my_dict = {'b': 2, 'c': 3, 'a': 1}
+sorted_dict = dict(sorted(my_dict.items()))
+print("The sorted dictionary by key is:", sorted_dict)
+
+# 12. Write a Python program to get the maximum and minimum value in a dictionary. 
+my_dict = {'a': 10, 'b': 20, 'c': 30}
+min_value = min(my_dict.values())
+max_value = max(my_dict.values())
+
+print("The minimum value in the dictionary is:", min_value)
+print("The maximum value in the dictionary is:", max_value)
+
+# 13. Write a Python program to remove duplicates from Dictionary.
+my_dict = {'a': 1, 'b': 2, 'c': 2, 'd': 1}
+
+my_dict = {k: v for k, v in sorted(my_dict.items()) if v not in my_dict.values()}
+
+print("The dictionary after removing duplicates is:", my_dict)
+
+# 14. Write a Python program to check a dictionary is empty or not. 
+
+my_dict = {}
+if not bool(my_dict):
+    print("Dictionary is empty")
+else:
+    print("Dictionary is not empty")
+
+
+# 15. Write a Python program to combine two dictionary adding values for common keys.
+from collections import Counter
+
+d1 = {'a': 100, 'b': 200, 'c': 300}
+d2 = {'a': 300, 'b': 200, 'd': 400}
+
+d3 = Counter(d1) + Counter(d2)
+print(d3)
+
+
+# 16. Write a Python program to find the highest 3 values in a dictionary.
+my_dict = {'a': 10, 'b': 20, 'c': 30, 'd': 40, 'e': 50}
+
+sorted_values = sorted(my_dict.values(), reverse=True)
+highest_values = sorted_values[:3]
+print(highest_values)
+
+
+# 17. Write a Python program to match key values in two dictionaries.
+ dict1 = {'key1': 1, 'key2': 3, 'key3': 2}
+dict2 = {'key1': 1, 'key2': 2}
+
+for key in dict1.keys():
+    if key in dict2.keys() and dict1[key] == dict2[key]:
+        print(key + ': ' + str(dict1[key]) + ' is present in both dict1 and dict2')
+
+
+# 18. Write a Python program to check if all dictionaries in a list are empty or not.
+my_list1 = [{}, {}, {}]
+my_list2 = [{1,2}, {}, {}]
+
+def check_empty_dicts(lst):
+    for d in lst:
+        if bool(d):
+            return False
+    return True
+
+print(check_empty_dicts(my_list1))
+print(check_empty_dicts(my_list2))
+
+#19. Write a Python program to remove duplicates from a list of lists.
+my_list = [[10, 20], [40], [30, 56, 25], [10, 20], [33], [40]]
+new_list = []
+
+for sublist in my_list:
+    if sublist not in new_list:
+        new_list.append(sublist)
+
+print(new_list)
+
+
+#20. Write a Python program to extend a list without append.
+
+list1 = [10, 20, 30]
+list2 = [40, 50, 60]
+
+list1[:0] = list2
+print(list1)
+
+
